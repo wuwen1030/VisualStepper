@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XTStepper" customModule="VisualStepper" customModuleProvider="target">
+            <connections>
+                <outlet property="minusButton" destination="Eim-V8-hZ3" id="Rbc-hi-WlF"/>
+                <outlet property="plusButton" destination="MOp-zO-UGY" id="AGh-zK-yPT"/>
+                <outlet property="valueLabel" destination="CuB-ug-CCf" id="kjV-yw-LIe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuB-ug-CCf">
+                    <rect key="frame" x="0.0" y="0.0" width="180" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eim-V8-hZ3" userLabel="Minus Button">
+                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Eim-V8-hZ3" secondAttribute="height" multiplier="1:1" id="Kad-eh-PPc"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="number_picker_minus">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled" backgroundImage="number_picker_minus_disabled"/>
+                    <connections>
+                        <action selector="minusButtonPressed:" destination="-1" eventType="touchUpInside" id="t6P-GQ-oiL"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MOp-zO-UGY" userLabel="Plus Button">
+                    <rect key="frame" x="130" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="MOp-zO-UGY" secondAttribute="height" multiplier="1:1" id="k3l-kW-91L"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="number_picker_plus">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="disabled" backgroundImage="number_picker_plus_disabled"/>
+                    <connections>
+                        <action selector="plusButtonPressed:" destination="-1" eventType="touchUpInside" id="bx0-dD-6up"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Eim-V8-hZ3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7z5-vQ-NBE"/>
+                <constraint firstItem="MOp-zO-UGY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="CAb-SK-VVD"/>
+                <constraint firstItem="CuB-ug-CCf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ug3-Lb-wT9"/>
+                <constraint firstAttribute="bottom" secondItem="Eim-V8-hZ3" secondAttribute="bottom" id="YK5-ah-A2a"/>
+                <constraint firstAttribute="trailing" secondItem="CuB-ug-CCf" secondAttribute="trailing" id="cKp-cr-izX"/>
+                <constraint firstItem="CuB-ug-CCf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="g0q-lB-cYm"/>
+                <constraint firstItem="Eim-V8-hZ3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jtO-Us-yPE"/>
+                <constraint firstAttribute="bottom" secondItem="CuB-ug-CCf" secondAttribute="bottom" id="jxL-A0-Jig"/>
+                <constraint firstAttribute="bottom" secondItem="MOp-zO-UGY" secondAttribute="bottom" id="pOo-5v-gfV"/>
+                <constraint firstAttribute="trailing" secondItem="MOp-zO-UGY" secondAttribute="trailing" id="tvo-PP-iy0"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="253" y="432"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="number_picker_minus" width="25" height="25"/>
+        <image name="number_picker_minus_disabled" width="25" height="25"/>
+        <image name="number_picker_plus" width="25" height="25"/>
+        <image name="number_picker_plus_disabled" width="25" height="25"/>
+    </resources>
+</document>
